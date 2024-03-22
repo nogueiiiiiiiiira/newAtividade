@@ -1,0 +1,48 @@
+.wrapMenu{
+    background-color: var(--background-secondary);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    box-shadow: var(--shadow);
+    justify-content: center;
+    display: flex;
+    font-size: 2.5vh;
+}
+
+.navLinks {
+    text-align: center;
+}
+
+.navLinks ul {
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    gap: 2vh;
+
+}
+
+.navLinks ul li {
+    padding: 8px 12px;
+}
+
+.navLinks ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.navLinks ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+
+.navLinks ul li:hover::after {
+    width: 100%;
+}

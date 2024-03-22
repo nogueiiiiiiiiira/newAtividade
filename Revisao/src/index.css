@@ -1,0 +1,27 @@
+:root {
+  --text-title: white;
+  --text-p: #d3cbcb;
+  --shadow: box-shadow: rgba(0, 0, 0, 0);
+  --background-primary: pink;
+  --background-secondary: rgb(82, 59, 59);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  padding: 0;
+}
+
+body{
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--background-primary);
+  flex-direction: column;
+  display: flex;
+}
+
+h1, h2, h3, h4, h5{
+  color: var(--text-title)
+}
