@@ -6,7 +6,7 @@ export default function Menu(){
                 <div className={style.navLinks}>
                 <ul>
                     <li><a href="">Profiles</a></li>
-                    <li><a href={"/Tec"}>Tecnologies</a></li>
+                    <li><a href={"/tec"}>Tecnologies</a></li>
                     <li><a href="">Graphics</a></li>
                 </ul>   
                 </div>

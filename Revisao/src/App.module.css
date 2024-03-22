@@ -1,8 +1,9 @@
-.wrapPrincipal{
-    justify-content: center;
-    align-items: center;
+.wrap-principal{
     display: flex;
     flex-direction: column;
-    background-color: pink;
-    width: 100vw;
+  
+}
+
+.firstPageHeading{
+    padding-top: 100px;
 }

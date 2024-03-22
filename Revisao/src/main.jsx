@@ -1,28 +1,26 @@
-import './index.css'
-import * as React from "react";
-import * as ReactDOM from "react-dom/client";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import { Tecnologies } from './Tecnologies.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { Tecnologies } from './Tecnologies';
-import App from './App'
-  
-const router = createBrowserRouter([ 
+import './index.css'
 
+const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
+    element:  <App />,
   },
-
   {
-    path: "/Tec",
-    element: <Tecnologies/>
-  }
+    path: "/tec",
+    element:  <Tecnologies />,
+  },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)
