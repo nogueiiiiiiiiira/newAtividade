@@ -12,8 +12,15 @@ import {
 import Menu from '../components/Menu';
 import style from '../Contact.module.css'
 
+
 export const Contact = () => {
     const geoData = ({lat: -25.3718243, long: -49.2161051})
+    const defaultPhoneNumber = '5541995340694';
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
 
     return(
         <div>
