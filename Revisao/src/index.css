@@ -2,8 +2,8 @@
   --text-title: #05a8a8;
   --text-p: #ffffff;
   --bg-primary: #0a1424;
-  --bg-secondary: #162336;
-  --bg-third: #223147;
+  --bg-secondary: white;
+  --bg-third: #b94a66;
   --shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --color-shadow: rgba(51, 185, 219, 0.315) 0px 5px 15px;
 }
@@ -12,6 +12,7 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  font-family: 'Josefin Sans', cursive;
 }
 
 body{
@@ -22,11 +23,6 @@ body{
   background-color: var(--bg-primary);
   font-family: "Inter", sans-serif;
 
-}
-
-h1,h2,h3,h4,h5{
-  color: var(--text-title);
-  font-family: "Gemunu Libre", sans-serif;
 }
 
 p{
@@ -52,4 +48,13 @@ a{
 a:hover{
   opacity: 1;
   cursor: pointer;
+}
+
+
+.leaflet-control-attribution{
+  display: none;
+}
+
+.leaflet-top{
+  z-index: 888;
 }

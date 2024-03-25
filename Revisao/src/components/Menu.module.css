@@ -1,4 +1,4 @@
-.wrapMenu{
+.wrap-menu{
     background-color: var(--background-secondary);
     width: 100vw;
     position: fixed;
@@ -7,13 +7,14 @@
     justify-content: center;
     display: flex;
     font-size: 2.5vh;
+    padding: 1rem;
 }
 
-.navLinks {
+.nav-links {
     text-align: center;
 }
 
-.navLinks ul {
+.nav-links ul {
     list-style: none;
     display: flex;
     text-transform: uppercase;
@@ -21,18 +22,18 @@
 
 }
 
-.navLinks ul li {
+.nav-links ul li {
     padding: 8px 12px;
 }
 
-.navLinks ul li a {
+.nav-links ul li a {
     color: white;
     font-weight: bold;
     text-decoration: none;
     font-size: 30px;
 }
 
-.navLinks ul li::after {
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -43,6 +44,6 @@
 
 }
 
-.navLinks ul li:hover::after {
+.nav-links ul li:hover::after {
     width: 100%;
 }
