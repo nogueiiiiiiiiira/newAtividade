@@ -11,6 +11,7 @@ import {
   } from 'react-leaflet'
 import Menu from '../components/Menu';
 import style from '../Contact.module.css'
+import { useState } from 'react';
 
 
 export const Contact = () => {
@@ -22,13 +23,29 @@ export const Contact = () => {
         message: ''
     })
 
+    const handleChange = (e) => {
+        const{name, value} = e.target;
+        setFormData({...formData, [name]: value});
+    }
+ 
+    const handleWhatsAppMessage = () => {
+        const {name, email, message} = formData;
+        
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${defaultPhoneNumber}&text=
+        Nome:%20${name}%0D%0A
+        Email:%20${email}%0D%0A
+        Mensagem:%20${message}`;
+
+        window.open(whatsappUrl, '_blank');
+    }
+
     return(
-        <div>
+        <div className={style.wrapAllContact}>
             <Menu/>
-            <h1>Contato</h1>
-            <div>
+            <h1 className={style.wraph1}>Contato</h1>
+            <div className={style.wrapTwoDivs}>
                 <div className={style.wrapMap}>
-                    <h2>Mapa</h2>
+                    <h2 className={style.wraph2}>Mapa</h2>
                     <MapContainer center={[geoData.lat, geoData.long]} zoom={17} scrollWheelZoom={false} style={{width: "100%", height: "100%"}}>
                         <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -43,19 +60,16 @@ export const Contact = () => {
                     </MapContainer>
                 </div>
                 <div>
-                    <h2>WhatsApp</h2>
+                <h2 className={style.wraph2}>WhatsApp</h2>
+                    <div className={style.inputsDiv}>
                     <div>
-                    <div>
-                        <label htmlFor="name"></label>
-                        <input type="text" id='name' name='name' value={} onChange={} required/>
+                        <input placeholder='Digite o seu nome:' type="text" id='name' name='name' value={formData.name} onChange={handleChange} required/>
                     </div>
                     <div>
-                        <label htmlFor="email"></label>
-                        <input type="text" id='email'  name='email' value={} onChange={} required />
+                        <input placeholder='Digite o seu email:' type="text" id='email'  name='email' value={formData.email} onChange={handleChange} required />
                     </div>
                     <div>
-                        <label htmlFor="message"></label>
-                        <textarea id='message'  name='message' value={} onChange={} required ></textarea>
+                        <textarea placeholder='Digite sua mensagem:' id='message'  name='message' value={formData.message} onChange={handleChange} required ></textarea>
                         
                     </div> 
                     <button onClick={handleWhatsAppMessage}> Enviar Mensagem</button>

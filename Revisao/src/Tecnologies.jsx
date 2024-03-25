@@ -3,7 +3,10 @@ import Card from './components/Card'
 import Menu from './components/Menu'
 import style from './Tecnologies.module.css'
 
-
+import REACT from './assets/img/react.svg'
+import HTML from './assets/img/HTML.png'
+import CSS from './assets/img/CSS.png'
+import JAVASCRIPT from './assets/img/JS.png'
 
 export const Tecnologies = () => {
     const [show, setShow] = useState('all');
@@ -20,16 +23,16 @@ export const Tecnologies = () => {
                 <button className={style.btnTec} onClick={() => setShow('all')}>All TEC'S</button>
                </div>
                 <div className={style['wrap-cards-tec']}>
-                   {show === 'html' && <Card title='HTML' desc='Sou o HTML'/>}
-                   {show === 'css' && <Card title='CSS'  desc='Sou o CSS'/>}
-                   {show === 'js' && <Card title='JAVASCRIPT' desc='Sou o JAVASCRIPT'/>}
-                   {show === 'react' && <Card title='REACT JS'  desc='Sou o REACT'/>}
+                   {show === 'html' && <Card title='HTML' imgSrc={HTML} desc='Sou o HTML'/>}
+                   {show === 'css' && <Card title='CSS' imgSrc={CSS} desc='Sou o CSS'/>}
+                   {show === 'js' && <Card title='JAVASCRIPT'imgSrc={JAVASCRIPT} desc='Sou o JAVASCRIPT'/>}
+                   {show === 'react' && <Card title='REACT JS' imgSrc={REACT} desc='Sou o REACT'/>}
                    {show === 'all' && 
                    <>
-                   <Card title='HTML' desc='Sou o HTML'/> 
-                   <Card title='CSS' desc='Sou o CSS'/>
-                   <Card title='JAVASCRIPT'desc='Sou o JAVASCRIPT'/>
-                   <Card title='REACT JS' desc='Sou o REACT'/>
+                   <Card title='HTML' imgSrc={HTML} desc='Sou o HTML'/> 
+                   <Card title='CSS' imgSrc={CSS} desc='Sou o CSS'/>
+                   <Card title='JAVASCRIPT' imgSrc={JAVASCRIPT} desc='Sou o JAVASCRIPT'/>
+                   <Card title='REACT JS' imgSrc={REACT} desc='Sou o REACT'/>
                    </>}
                 </div>
             </section>
