@@ -8,9 +8,9 @@ import {
 
 import App from './App.jsx'
 import { Tecnologies } from './Tecnologies.jsx';
-import { Contact } from './assets/Contact.jsx';
-
+import { Contact } from './Contact.jsx';
 import './index.css'
+import { Calculations } from './Calculations.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element:  <Contact />,
+  },
+  {
+    path: "/calc",
+    element:  <Calculations />,
   }
 ]);
 

@@ -1,0 +1,38 @@
+.sectionCalc{
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10vh;
+    flex-direction: column;
+    background-color: var(--bg-third);
+}
+
+.wrapCalc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.wrapInputsCalc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 4vh;
+}
+
+.inputCalc{
+    border: none;
+    border-radius: 999;
+    padding: 7px 10px;
+}
+
+.wrapEach{
+    background-color: red;
+}
+
+.wrapEach:hover{
+    box-shadow: var(--color-shadow);
+}

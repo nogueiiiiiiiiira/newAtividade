@@ -9,9 +9,9 @@ import {
     Marker,
     Popup
   } from 'react-leaflet'
-import Menu from '../components/Menu';
-import style from '../Contact.module.css'
+import Menu from './components/Menu';
 import { useState } from 'react';
+import style from './Contact.module.css'
 
 
 export const Contact = () => {
@@ -42,10 +42,10 @@ export const Contact = () => {
     return(
         <div className={style.wrapAllContact}>
             <Menu/>
-            <h1 className={style.wraph1}>Contato</h1>
+            <h1>CONTACTS</h1>
             <div className={style.wrapTwoDivs}>
                 <div className={style.wrapMap}>
-                    <h2 className={style.wraph2}>Mapa</h2>
+                    <h2 className={style.wraphMapa}>Mapa</h2>
                     <MapContainer center={[geoData.lat, geoData.long]} zoom={17} scrollWheelZoom={false} style={{width: "100%", height: "100%"}}>
                         <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -60,19 +60,19 @@ export const Contact = () => {
                     </MapContainer>
                 </div>
                 <div>
-                <h2 className={style.wraph2}>WhatsApp</h2>
+                <h2 className={style.wraphWhats}>WhatsApp</h2>
                     <div className={style.inputsDiv}>
                     <div>
-                        <input placeholder='Digite o seu nome:' type="text" id='name' name='name' value={formData.name} onChange={handleChange} required/>
+                        <input className={style.inputCont} placeholder='Digite o seu nome:' type="text" id='name' name='name' value={formData.name} onChange={handleChange} required/>
                     </div>
                     <div>
-                        <input placeholder='Digite o seu email:' type="text" id='email'  name='email' value={formData.email} onChange={handleChange} required />
+                        <input className={style.inputCont} placeholder='Digite o seu email:' type="text" id='email'  name='email' value={formData.email} onChange={handleChange} required />
                     </div>
                     <div>
-                        <textarea placeholder='Digite sua mensagem:' id='message'  name='message' value={formData.message} onChange={handleChange} required ></textarea>
+                        <textarea className={style.textCont} placeholder='Digite sua mensagem:' id='message'  name='message' value={formData.message} onChange={handleChange} required ></textarea>
                         
                     </div> 
-                    <button onClick={handleWhatsAppMessage}> Enviar Mensagem</button>
+                    <button onClick={handleWhatsAppMessage} className={style.btn} > Enviar Mensagem</button>
                     </div>
                 </div>
             </div>
